@@ -140,7 +140,7 @@ const Home = ({navigation}) => {
 
 
   return (
-    <SafeAreaView style={{width: '100%' , height: '100%', backgroundColor: COLOURS.white, paddingTop: 50}}>
+    <SafeAreaView style={{width: '100%' , height: '100%', backgroundColor: COLOURS.white}}>
 
     <StatusBar style="dark" backgroundColor={COLOURS.white} />
     <ScrollView showsVerticalScrollIndicator={false} >
