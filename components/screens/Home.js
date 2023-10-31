@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { COLOURS, Items } from '../database/constant'
 import { StatusBar } from 'expo-status-bar'
 import { Entypo, MaterialCommunityIcons, FontAwesome } from '@expo/vector-icons'
+import MyCart from './MyCart'
 
 
 const Home = ({navigation}) => {
@@ -159,7 +160,7 @@ const Home = ({navigation}) => {
                     backgroundColor:COLOURS.backgroundLight
                 }}/>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>navigation.navigate("MyCart")}>
                 <MaterialCommunityIcons name = "cart" style={{
                     fontSize:18,
                     color: COLOURS.backgroundMedium,

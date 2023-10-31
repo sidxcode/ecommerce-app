@@ -5,6 +5,7 @@ import { COLOURS, Items } from '../database/constant';
 import { Entypo, Ionicons } from '@expo/vector-icons'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { StatusBar } from 'expo-status-bar'
+import { useNavigation } from '@react-navigation/native';
 
 const Productinfo = ({route, navigation}) => {
 
@@ -25,7 +26,7 @@ const Productinfo = ({route, navigation}) => {
     });
 
     return unsubscribe;
-    },[navigation])
+    },[navigation]);
 
   //get product data by productID
 
@@ -94,8 +95,6 @@ const Productinfo = ({route, navigation}) => {
     )
   }
 
-  console.log(product);
-
   return (
     <SafeAreaView style = {{
         width : '100%',
@@ -123,7 +122,7 @@ const Productinfo = ({route, navigation}) => {
             paddingTop : 16,
             paddingLeft : 16,
           }}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>navigation.navigate('Home')}>
             <Entypo name = "chevron-left" style={{
                     fontSize:18,
                     color: COLOURS.backgroundDark,
